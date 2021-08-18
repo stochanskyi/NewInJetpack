@@ -20,7 +20,6 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import androidx.transition.Fade
 import com.mars.newinjetpack.databinding.ActivityCameraBinding
 import com.mars.newinjetpack.presentation.camera.facingstatus.CameraFacingState
 import com.mars.newinjetpack.presentation.camera.flashstates.FlashState
