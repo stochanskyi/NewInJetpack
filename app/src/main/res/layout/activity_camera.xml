@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/shutter_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0"/>
+
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:background="#00AAAAAA">
+
+        <ImageButton
+            android:id="@+id/flash_mode_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="30dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:tint="@color/white"
+            tools:src="@drawable/ic_flash_auto" />
+
+
+        <ImageButton
+            android:id="@+id/capture_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bg_capture"
+            android:background="@null" />
+
+        <ImageButton
+            android:id="@+id/switch_camera_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/ic_flip_camera"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewInJetpack</string>
+    <string name="what_s_new_in_jetpack">What\'s new in Jetpack</string>
+    <string name="camerax">CameraX</string>
+</resources>
