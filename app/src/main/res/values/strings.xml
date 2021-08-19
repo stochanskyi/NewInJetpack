@@ -2,4 +2,11 @@
     <string name="app_name">NewInJetpack</string>
     <string name="what_s_new_in_jetpack">What\'s new in Jetpack</string>
     <string name="camerax">CameraX</string>
+    <string name="datastore">DataStore</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="id">ID</string>
+    <string name="save">Save</string>
+    <string name="saved_data">Saved Data</string>
+    <string name="data_saving">Data Saving</string>
 </resources>

@@ -5,18 +5,25 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.dataStore
 import com.mars.newinjetpack.UserData
 import com.mars.newinjetpack.data.datastore.proto.serializers.UserDataSerializer
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.runBlocking
+import javax.inject.Inject
 
 private const val DATA_STORE_FILE_NAME = "user_data.pb"
 
-class UserDataStoreImpl(private val context: Context) : UserDataStore {
+class UserDataStoreImpl @Inject constructor(
+    @ApplicationContext private val context: Context
+) : UserDataStore {
+
     private val Context.userPreferencesStore: DataStore<UserData> by dataStore(
         fileName = DATA_STORE_FILE_NAME,
         serializer = UserDataSerializer()
     )
     override val userDataFLow: Flow<UserData> = context.userPreferencesStore.data
 
+    private fun getUser() = runBlocking { context.userPreferencesStore.data.firstOrNull() }
 
     override suspend fun setUserData(userData: UserData) {
         context.userPreferencesStore.updateData { userData }
